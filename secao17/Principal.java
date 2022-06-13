@@ -22,6 +22,7 @@ public class Principal {
 		System.out.println("===========Deposito==========");
 		System.out.println("Informe o valor para Deposito");
 		float valor = input.nextFloat();
+		
 		if (valor > 0) {
 			Conta.Depositar(valor);
 			System.out.println("Deposito efetuado Realizado com sucesso");

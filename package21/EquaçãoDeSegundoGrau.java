@@ -10,12 +10,11 @@ public class EquaçãoDeSegundoGrau {
         double a, b, c, delta, x1, x2;
         System.out.println("Digite o valor de a: ");
         a= input.nextInt();
-        
-        System.out.println("Digite o valor de b: ");
+                System.out.println("Digite o valor de b: ");
         b =  input.nextInt();
         System.out.println("Digite o valor de c: ");
         c =  input.nextInt();
-        delta = Math.pow(b, 2) - 4 * a * c;
+        delta = (b*b) - (4*a*c);
         if (delta < 0) {
         	System.out.println("Não há raízes reais");
         } else if (delta == 0) {
