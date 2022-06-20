@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Estacao {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Escolha 1 para Verão: ");
@@ -27,8 +28,9 @@ public class Estacao {
 			Classes.getPrimavera();
 			break;
 		default:
-			System.err.println("Numero Invalido");
-			break;
+			throw new Error("Numero inválido");
+//			System.err.println("Numero Invalido");
+//			break;
 		}
 		input.close();
 	}
