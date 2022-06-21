@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Veiculo {
 	Scanner input = new Scanner(System.in);
 	public static final String LocalDate = null;
-	static String nome;
+	String nome;
 	static String Placa;
 	LocalDate Data_aquisicão;
 	int Manutencao;
@@ -16,7 +16,7 @@ public class Veiculo {
 		setPlaca(placa);
 		setData_aquisicão(data_aquisicão);
 		setManutencao(manutencao, manutencao);
-		this.lista.add(this);
+		Veiculo.lista.add(this);
 	}
 
 	public String getNome() {
@@ -54,6 +54,7 @@ public class Veiculo {
 		return 0;
 	}
 
+	@SuppressWarnings("unused")
 	public void setManutencao(int dias, int valor) {
 		int dias1 = 0, valo1 = 0;
 		System.out.println("Informe se o Veiculo tem Manutencao: \n1 para Sim \n2 para NAO: ");
@@ -82,7 +83,7 @@ public class Veiculo {
 				}else if (dias1 >120){
 				System.out.println("Indice de Sucatiameto =2,0");	
 				}
-			}
+			}break;
 		case 2:
 			System.out.println("Nao a Indice de Sucatiameto\n");
 			break;
