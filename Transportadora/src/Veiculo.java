@@ -15,7 +15,7 @@ public class Veiculo {
 		setNome(nome);
 		setPlaca(placa);
 		setData_aquisicão(data_aquisicão);
-		setManutencao(manutencao);
+		setManutencao(manutencao, manutencao);
 		this.lista.add(this);
 	}
 
@@ -54,8 +54,8 @@ public class Veiculo {
 		return 0;
 	}
 
-	public void setManutencao(int dias) {
-		int dias1 = 0;
+	public void setManutencao(int dias, int valor) {
+		int dias1 = 0, valo1 = 0;
 		System.out.println("Informe se o Veiculo tem Manutencao: \n1 para Sim \n2 para NAO: ");
 		int op = input.nextInt();
 		switch (op) {
@@ -66,9 +66,10 @@ public class Veiculo {
 				System.out.println("Informe a peça:");
 				String peça = input.next();
 				System.out.println("Informe o valor: ");
-				int valor = input.nextInt();
+				int valor1 = input.nextInt();
 				System.out.println("Informe os dias parado: ");
 				dias1 = input.nextInt();
+				
 				 
 				if (dias1 <= 20) {
 					System.out.println("Indice de Sucatiameto = 0");
@@ -82,9 +83,12 @@ public class Veiculo {
 				System.out.println("Indice de Sucatiameto =2,0");	
 				}
 			}
+		case 2:
+			System.out.println("Nao a Indice de Sucatiameto\n");
+			break;
 		}
-		int manutencao = 0;
-		Manutencao = manutencao;
+		//int manutencao = 0;
+		Manutencao = dias1;
 	}
 
 	public static ArrayList<Veiculo> getLista() {
